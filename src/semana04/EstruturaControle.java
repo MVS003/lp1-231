@@ -69,9 +69,13 @@ public class EstruturaControle {
         double n3 = 7.4;
         
         double[] notas = new double[3];
-        notas[0] = 10.0;teste
-            System.out.println(notas[j]);
-        }
+        notas[0] = 10.0;
+        notas[1] = 5.5;
+        notas[2] = 7.4;
+
+        System.out.println(notas[0]);
+        System.out.println(notas[1]);
+        System.out.println(notas[2]);
 
         //foreach
 
