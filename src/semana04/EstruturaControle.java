@@ -1,6 +1,5 @@
 package semana04;
 
-import javax.sound.sampled.SourceDataLine;
 
 public class EstruturaControle {
     public static void main(String[] args) {

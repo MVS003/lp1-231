@@ -2,8 +2,6 @@ package semana05.exercicios;
 
 import java.util.Scanner;
 
-import javax.sound.sampled.SourceDataLine;
-
 public class Ex01 {
     public static void main(String[] args) {
         /* Crie um programa em Java que recebe como entrada o comprimento, altura e a largura de um aquário e calcule as seguintes informações.
