@@ -19,7 +19,6 @@ public class Aquario {
     }
     
     public double calcularQuantidadeLitrosFiltro(){
-        double filtragem = calcularVolume() * 2;
-        return filtragem;
-    } 
+        return calcularVolume() * 2;
+    }    
 }

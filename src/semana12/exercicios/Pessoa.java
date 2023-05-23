@@ -1,16 +1,24 @@
 package semana12.exercicios;
 
-public class Ex02 {
+public class Pessoa {
     /*Com base no Ex02. da semana 11, implemente um construtor para classe Pessoa.
     Escreva testes de unidade para o construtor. */
     
     public double altura;
     public double peso;
-    
+     public Pessoa (double altura, double peso) {
+        this.altura = altura;
+        this.peso = peso;
+    }
+
+    public Pessoa (double valor) {
+        this(valor, valor);
+    }
+
     public double calcularIMC() {
         return peso/(altura*altura);
     }
-
+    
     public String getFaixa() {
         if (calcularIMC() < 18.5) {
             return "Você está abaixo do peso";
