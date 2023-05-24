@@ -11,5 +11,42 @@ public class Conta {
     public double saldo;
     public String correntista;
 
-    
+    public Conta (int codigo, String correntista) {
+        this.codigo = codigo;
+        this.correntista = correntista;
+    }
+
+    public double sacar (double valor) {
+        if (valor <= 0) {
+            System.out.println("Não é possivel sacar esse valor");
+            return 0;
+        }
+        if (valor > saldo){
+            System.out.println("Seu saldo é menor que o valor digitado");
+            return 0;
+        }
+        return saldo - valor;
+    }
+
+
+    public double depositar(double valor) {
+        if (valor <= 0) {
+            System.out.println("Não é possivel depositar esse valor");
+            return 0;
+        }
+        return saldo + valor;
+    }
+
+    public double transferir(double valor, Conta contaDestino) {
+        if (valor <= 0) {
+            System.out.println("Não é possível transferir esse valor");
+            return 0;
+        }
+        if (valor > saldo) {
+            System.out.println("Seu saldo é menor que o valor digitado");
+            return 0;
+        }
+        contaDestino.saldo = saldo + valor;
+        return saldo - valor;
+    }
 }
