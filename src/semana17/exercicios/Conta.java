@@ -3,34 +3,40 @@ package semana17.exercicios;
 import java.time.LocalDate;
 
 public class Conta {
-    public int numero;
-    public LocalDate dataAbertura;
+    
+    private int numero;
+    private LocalDate dataAbertura;
     protected double saldo;
     protected double tarifa;
+    private Correntista correntista;
 
-    public Conta (int numero, LocalDate dataAbertura, double saldo) {
+    public Conta(int numero, LocalDate dataAbertura, double saldo, double tarifa, Correntista correntista) {
         this.numero = numero;
-        this.dataAbertura = dataAbertura;
+        this.dataAbertura = LocalDate.now();
         this.saldo = saldo;
+        this.tarifa = tarifa;
+        this.correntista = correntista;
     }
 
-    public void sacar (double valor) {
-        if (valor <= 0) {
-            System.out.println("Não é possivel sacar esse valor");
+    public Conta(int numero, LocalDate dataAbertura, Correntista correntista) {
+        this.numero = numero;
+        this.dataAbertura = LocalDate.now();
+        this.correntista = correntista;
+        this.saldo = 0.0;
+        this.tarifa = 0.0;
+    }
+
+    public void sacar(double valor) {
+        if(valor <= saldo) {
+            saldo -= valor;
         }
-        if (valor > saldo){
-            System.out.println("Seu saldo é menor que o valor digitado");
-        }
-        double novosaldo = saldo - valor;
-        System.out.println("Novo saldo ="+ novosaldo);
     }
 
     public void depositar(double valor) {
-        if (valor <= 0) {
-            System.out.println("Não é possivel depositar esse valor");
-        }
-        double novosaldo = saldo + valor;
-        System.out.println("Novo saldo ="+ novosaldo);
+        saldo += valor;
     }
 
+    public double calcularTarifa() {
+        return 0;
+    }
 }
