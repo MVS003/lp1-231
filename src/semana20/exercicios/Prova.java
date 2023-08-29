@@ -10,8 +10,8 @@ public class Prova{
         pontuacao = 0.0;
         questoes = new ArrayList<>();
     }
-    public void adicionarQuestao(Questao questao) {
-        questoes.add("questão");
+    public void adicionarQuestao (Prova questao) {
+        questoes.add(questao);
         pontuacao ++;
     }
 } 

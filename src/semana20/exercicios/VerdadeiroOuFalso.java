@@ -10,9 +10,7 @@ public class VerdadeiroOuFalso extends Questao {
 
     
     @Override 
-    public boolean validarResposta(String resposta) 
-
-    { 
+    public boolean validarResposta(String resposta) { 
         return resposta.equalsIgnoreCase("V") == resposta; 
     } 
 
