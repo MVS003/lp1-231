@@ -6,12 +6,12 @@ public class Prova{
     private double pontuacao;
     private ArrayList<Prova> questoes;
 
-    public Prova(double pontuacao, ArrayList questoes) {
-        this.pontuacao = 0.0;
-        this.questoes = questoes;
+    public Prova() {
+        pontuacao = 0.0;
+        questoes = new ArrayList<>();
     }
-    public double CalcularPontuacaoTotal(){
-        
-     return pontuacao;
+    public void adicionarQuestao(Questao questao) {
+        questoes.add("questão");
+        pontuacao ++;
     }
 } 
